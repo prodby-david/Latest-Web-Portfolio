@@ -21,18 +21,27 @@ export default function Navbar() {
       </a>
 
       <div className="hidden md:flex gap-6 text-sm font-medium">
+
         <Link href="/" className="hover:text-color-2 text-color transition-colors">
           Home
         </Link>
+
         <Link href="/about" className="hover:text-color-2 text-color transition-colors">
           About Me
         </Link>
+
         <Link href="/qualifications" className="hover:text-color-2 text-color transition-colors">
           Qualifications
         </Link>
+
+        <Link href="/skills" className="hover:text-color-2 text-color transition-colors">
+          Skills
+        </Link>
+
         <Link href="/projects" className="hover:text-color-2 text-color transition-colors">
           Projects
         </Link>
+
       </div>
 
       <div className="flex items-center gap-1">
