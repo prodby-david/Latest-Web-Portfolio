@@ -56,6 +56,7 @@ export default function Navbar() {
           ${menuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-5 pointer-events-none"}
         `}
       >
+        
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -63,6 +64,7 @@ export default function Navbar() {
         >
           Home
         </Link>
+
         <Link
           href="/about"
           onClick={() => setMenuOpen(false)}
@@ -70,6 +72,7 @@ export default function Navbar() {
         >
           About Me
         </Link>
+
         <Link
           href="/qualifications"
           onClick={() => setMenuOpen(false)}
@@ -77,6 +80,15 @@ export default function Navbar() {
         >
           Qualifications
         </Link>
+
+        <Link
+          href="/skills"
+          onClick={() => setMenuOpen(false)}
+          className="hover:text-color-2 text-color transition p-1"
+        >
+          Skills
+        </Link>
+
         <Link
           href="/projects"
           onClick={() => setMenuOpen(false)}
@@ -84,7 +96,9 @@ export default function Navbar() {
         >
           Projects
         </Link>
+
       </div>
+
     </nav>
   );
 }
