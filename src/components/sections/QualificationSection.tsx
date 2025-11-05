@@ -5,13 +5,13 @@ import { CalendarIcon } from "@heroicons/react/24/outline";
 
 export default function Qualifications() {
   return (
-    <div className="flex flex-col items-center justify-center mt-10 p-5 gap-10">
+    <div className="flex flex-col items-center justify-center p-5 gap-10">
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center mt-25"
       >
         <h2 className="text-3xl font-semibold text-color-3">Qualifications</h2>
         <p className="text-sm text-color-2">My Educational Background</p>
@@ -19,8 +19,8 @@ export default function Qualifications() {
 
       <div className="flex items-center gap-3 md:gap-10 mt-5">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
           className="mb-40"
@@ -46,8 +46,8 @@ export default function Qualifications() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           viewport={{ once: true }}
           className="mt-40"

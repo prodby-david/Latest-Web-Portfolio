@@ -7,23 +7,22 @@ import ShowResume from "@/components/buttons/resume";
 export default function About() {
   return (
     <div className="px-5 py-2">
-      {/* Header */}
+
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center m-5"
+        className="text-center mt-25"
       >
         <h1 className="text-2xl font-semibold text-color-2">About Me</h1>
         <p className="text-sm text-color">Knowing more about me</p>
       </motion.div>
 
-      {/* Content */}
       <div className="flex flex-col lg:flex-row items-center justify-around gap-10 mt-5">
-        {/* Image Section */}
+
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -80 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-100 shrink-0"
         >
@@ -32,14 +31,16 @@ export default function About() {
             alt="About John David"
             width={350}
             height={350}
+            priority
+            loading="eager"
             className="object-cover w-full h-full rounded-md shadow-lg"
           />
+
         </motion.div>
 
-        {/* Text Section */}
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="flex flex-col justify-around items-center text-color text-sm md:text-base text-justify max-w-md"
         >

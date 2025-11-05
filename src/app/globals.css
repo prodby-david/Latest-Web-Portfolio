@@ -14,15 +14,22 @@
   --primary: var(--color-color);
   --secondary: var(--color-color-2);
   --accent: var(--color-color-3);
+  --navbar-bg: #ffffff;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 .dark {
-  --bg: #0E0A18;      
-  --text: #E7E6EF;    
-  --primary: #B892FF;   
-  --secondary: #D07EFF; 
-  --accent: #8D6AE6;  
+  --bg: #0C0A12;       
+  --text: #EAE6F8;     
+  --primary: #C09BFF;  
+  --secondary: #E28FFF;
+  --accent: #9D7BFF;
+  --navbar-bg: #1A1625;
 }
+
 
 body {
   margin: 0;
@@ -31,6 +38,10 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 @keyframes float {
