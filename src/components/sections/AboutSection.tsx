@@ -1,6 +1,4 @@
-"use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import ShowResume from "@/components/buttons/resume";
 
@@ -8,24 +6,18 @@ export default function About() {
   return (
     <div className="px-5 py-2">
 
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-center mt-25"
-      >
+      <div className="text-center mt-25"
+      data-aos="fade-down"  
+      data-aos-duration="1800">
         <h1 className="text-2xl font-semibold text-color-2">About Me</h1>
         <p className="text-sm text-color">Knowing more about me</p>
-      </motion.div>
+      </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-around gap-10 mt-5">
+      <div className="flex flex-col lg:flex-row items-center justify-around gap-10 mt-5" data-aos="fade-down"  
+          data-aos-duration="1800">
 
-        <motion.div
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-100 shrink-0"
-        >
+        <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-100 shrink-0" data-aos="fade-down"  
+          data-aos-duration="1800">
           <Image
             src="/images/about-img.jpg"
             alt="About John David"
@@ -36,14 +28,10 @@ export default function About() {
             className="object-cover w-full h-full rounded-md shadow-lg"
           />
 
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="flex flex-col justify-around items-center text-color text-sm md:text-base text-justify max-w-md"
-        >
+        <div className="flex flex-col justify-around items-center text-color text-sm md:text-base text-justify max-w-md" data-aos="fade-down"  
+          data-aos-duration="1800">
           <p className="mt-2 md:mt-1">
             Hi there! I'm John David, an Information Technology student at STI
             College Global City who loves solving problems through technology.
@@ -62,14 +50,11 @@ export default function About() {
             learning and growing as a student and future tech professional.
           </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          >
+          <div data-aos="fade-down"  
+          data-aos-duration="1800">
             <ShowResume />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );

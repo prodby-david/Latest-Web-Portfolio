@@ -17,10 +17,6 @@
   --navbar-bg: #ffffff;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 .dark {
   --bg: #0C0A12;       
   --text: #EAE6F8;     

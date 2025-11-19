@@ -1,5 +1,4 @@
-"use client";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 export default function Skills() {
@@ -24,40 +23,32 @@ export default function Skills() {
 
 
   return (
+    
     <div className="flex flex-col items-center justify-center px-5">
 
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="flex flex-col items-center mt-25"
+      <div 
+      className="flex flex-col items-center mt-25"
+      data-aos="fade-down"  
+      data-aos-duration='1200'
       >
         <h2 className="text-xl font-semibold text-color-3">Skills</h2>
         <p className="text-sm text-color-2">My Technical Skills</p>
-      </motion.div>
+      </div>
 
-      <motion.div
-        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 place-items-center mt-5 py-5"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-      >
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 place-items-center mt-5 py-5">
+
         {skills.map((skill, index) => (
-          <motion.div
+
+          <div
             key={index}
             className="relative flex flex-col items-center group"
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            data-aos="fade-down"  
+            data-aos-duration='1200'    
+            data-aos-delay={index * 100} 
+
           >
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="relative flex flex-col items-center hover:bg-color-2 rounded-full p-3 "
+            <div
+              className="relative flex flex-col items-center hover:bg-color-2 rounded-full p-3"
             >
               <Image
                 src={skill.src}
@@ -75,13 +66,15 @@ export default function Skills() {
 
               </div>
 
-            </motion.div>
+            </div>
 
             <p className="pt-2 text-color-2 text-sm">{skill.name}</p>
 
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+
+      </div>
+
     </div>
   );
 }

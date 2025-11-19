@@ -16,7 +16,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full py-3 flex justify-around items-center text-color z-50 fixed top-0 left-0 shadow-sm shadow-color" style={{ backgroundColor: "var(--navbar-bg)" }}>
+    <nav className="w-full py-3 flex justify-around items-center text-color z-50 fixed top-0 left-0 shadow-sm shadow-color" style={{ backgroundColor: "var(--navbar-bg)" }}
+    data-aos="fade-down"  
+    data-aos-duration="1200">
       <a
         href="https://github.com/prodby-david"
         target="_blank"
